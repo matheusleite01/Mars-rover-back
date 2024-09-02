@@ -25,6 +25,16 @@ export const movementShema = new Schema(
       type: [String],
       required: true,
     },
+    plateau: {
+      maxX: {
+        type: Number,
+        required: true,
+      },
+      maxY: {
+        type: Number,
+        required: true,
+      },
+    },
   },
   { timestamps: true },
 );

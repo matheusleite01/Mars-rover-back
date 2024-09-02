@@ -29,11 +29,13 @@ class MovementService {
     }
 
     const finalPosition = `${x} ${y} ${direction}`;
+    const { maxX, maxY } = getPlateau();
     const rover = new Movement({
       initialPosition: initialPosition,
       commands: commands,
       finalPosition: finalPosition,
       log: log,
+      plateau: { maxX, maxY },
     });
     await rover.save();
 
